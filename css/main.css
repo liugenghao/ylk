@@ -1,0 +1,27 @@
+.topColor, .top {
+  background: linear-gradient(to top, #c79081 0%, #dfa579 100%);
+  background: -moz-linear-gradient(to top, #c79081 0%, #dfa579 100%);
+  background: -webkit-linear-gradient(to top, #c79081 0%, #dfa579 100%);
+  background: -o-linear-gradient(to top, #c79081 0%, #dfa579 100%); }
+
+.top {
+  text-align: center; }
+
+.top {
+  position: relative; }
+  .top h1 {
+    position: relative;
+    left: 0.8em;
+    padding: 15px 0;
+    color: #efefef;
+    font-size: 1.3em; }
+    .top h1 img {
+      position: absolute;
+      width: auto;
+      height: auto;
+      max-width: 80%;
+      max-height: 80%;
+      top: 0.2em;
+      left: 32%; }
+
+/*# sourceMappingURL=main.css.map */
