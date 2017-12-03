@@ -42,9 +42,15 @@ abbr,acronym {
     display:block; 
     height:0; 
     clear:both; 
-} 
+}
+a{
+    color:#fff;
+    text-decoration: none;
+}
 .clearfix {*zoom:1;}/*IE/7/6*/ 
-
+.hide{
+    display: none;
+}
 
  
 
