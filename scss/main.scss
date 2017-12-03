@@ -103,6 +103,11 @@ nav {
         left: -1.3em;
         top: 0.1em;
       }
+      &.contact-link:before{
+        @include awesomeFont("\f095", #fff, 1.2em);
+        left: -1.3em;
+        top: 0.1em;
+      }
     }
     &:after {
       @include awesomeFont("\f105", #fff);
@@ -265,7 +270,7 @@ nav {
       left: 0;
       padding-top: 10px;
       bottom: 0.2em;
-      overflow-y: scroll;
+      overflow: hidden;
       p {
         padding: 5% 10%;
         color: #ccc;
@@ -280,6 +285,7 @@ nav {
         font-size:1.2em;
       }
       table{
+
         color:#eee;
         width:70%;
         margin:1em auto;

@@ -88,6 +88,17 @@ nav {
         position: absolute;
         left: -1.3em;
         top: 0.1em; }
+      nav li a.contact-link:before {
+        content: "";
+        color: #fff;
+        font-size: 1.2em;
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+        position: absolute;
+        left: -1.3em;
+        top: 0.1em; }
     nav li:after {
       content: "";
       color: #fff;
@@ -232,7 +243,7 @@ nav {
       left: 0;
       padding-top: 10px;
       bottom: 0.2em;
-      overflow-y: scroll; }
+      overflow: hidden; }
       .main .part4 .board p {
         padding: 5% 10%;
         color: #ccc;

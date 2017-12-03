@@ -19,6 +19,10 @@ $(function () {
     $('.joinus-link').click(function () {
         $('html,body').animate({scrollTop: $joinusLinkPos-$height}, 800);
     });
+    $contactlink=$('#contact-link').offset().top;
+    $('.contact-link').click(function () {
+        $('html,body').animate({scrollTop: $contactlink-$height}, 800);
+    });
     $(window).scroll(function() {
         $pos = $(document).scrollTop()
         // alert($pos);
