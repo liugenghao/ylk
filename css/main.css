@@ -17,8 +17,12 @@ body {
 
 .top {
   position: fixed;
+  -moz-transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
   z-index: 9999;
-  width: 100%;
+  right: 0;
   left: 0;
   top: 0; }
   .top .bars {
@@ -279,7 +283,7 @@ footer {
   margin-top: 3.2em; }
   footer .go-top {
     position: absolute;
-    right: 3%;
+    right: 6%;
     top: 3%;
     color: #8b8d8d; }
   footer ul {
@@ -308,7 +312,7 @@ footer {
     margin-top: 2em; }
   footer h4 {
     position: absolute;
-    font-size: 1.2em;
+    font-size: 1em;
     color: #eee;
     right: 13%;
     bottom: 9%;
