@@ -1,4 +1,7 @@
 $(function () {
+    $windowWidth = $(window).width();
+    $fontSize = $windowWidth / 20;
+    $('body').css({'font-size':$fontSize});
     $height = $('.top').height()
     $('nav').css({top:$height});
     $('.main').css({top:$height});
@@ -59,23 +62,23 @@ $(function () {
     $('#bars').click(function () {
         if($('nav').hasClass('close')){
             $('nav').animate({left:'0'}).removeClass('close');
-            $('.main').animate({left:'39%'});
+            $('.main').animate({left:'50%'});
         }else{
-            $('nav').animate({left:'-39%'}).addClass('close');
+            $('nav').animate({left:'-50%'}).addClass('close');
             $('.main').animate({left:'0'});
         }
     });
     $('.main').click(function () {
-        $('nav').animate({left:'-45%'}).addClass('close');
+        $('nav').animate({left:'-50%'}).addClass('close');
         $('.main').animate({left:'0'});
     });
     $('footer').click(function () {
-        $('nav').animate({left:'-45%'}).addClass('close');
+        $('nav').animate({left:'-50%'}).addClass('close');
         $('.main').animate({left:'0'});
     });
     $('nav a').each(function () {
         $(this).click(function () {
-            $('nav').animate({left:'-39%'},600).addClass('close');
+            $('nav').animate({left:'-50%'},600).addClass('close');
             $('.main').animate({left:'0'},600);
             // $('nav a').removeClass('actived');
             // $(this).addClass('actived')

@@ -1,6 +1,7 @@
 @charset "UTF-8";
 body {
-  width: 100%; }
+  width: 100%;
+  font-size: 16px; }
 
 .container {
   width: 100%;
@@ -31,30 +32,31 @@ body {
     color: #efefef; }
   .top h1 {
     display: inline-block;
-    text-indent: -1.2em;
+    text-indent: 1.2em;
     background-image: url("../img/logo.png");
     background-repeat: no-repeat;
     background-size: 13%;
-    background-position: 0em 0.6em;
-    padding: 0.8em 3em;
+    background-position: 1em 0.8em;
+    padding: 0.8em 1em;
     color: #efefef;
-    font-size: 120%; }
+    font-size: 1em; }
 
 nav {
   position: fixed;
   z-index: 999;
   background: #58372b;
-  width: 39%;
-  left: -39%;
+  width: 50%;
+  left: -50%;
   bottom: 0; }
   nav li {
-    line-height: 5em; }
+    line-height: 3.6em; }
     nav li a {
       position: relative;
       display: inline-block;
       width: 100%;
       text-indent: 33%;
-      border-left: 0.4em solid transparent; }
+      border-left: 0.4em solid transparent;
+      font-size: 0.8em; }
       nav li a.actived {
         background: #46332c;
         border-left: 0.4em solid #C99280; }
@@ -125,36 +127,30 @@ nav {
     margin-bottom: -0.15em; }
   .main .part1 .img-food {
     position: absolute;
-    width: 40%;
-    right: 12%;
-    top: 15%; }
+    width: 42%;
+    right: 1em;
+    top: 1em; }
+  .main .part1 h2 {
+    position: absolute;
+    padding-bottom: 3px;
+    left: 3.8em;
+    top: 1.8em;
+    color: #eee;
+    text-shadow: 5px 2px 6px #333;
+    font-size: 1em;
+    font-weight: 600; }
   .main .part1 .slogan1 {
     position: absolute;
-    width: 26%;
-    left: 21%;
-    top: 22%; }
-  .main .part1 .slogan2 {
-    position: absolute;
-    width: 6%;
-    left: 29%;
-    top: 62%; }
-  .main .part1 .slogan3 {
-    position: absolute;
-    width: 6%;
-    left: 35%;
-    top: 62%; }
-  .main .part1 .slogan4 {
-    position: absolute;
-    width: 6%;
-    left: 41%;
-    top: 62%; }
+    width: 30%;
+    left: 3em;
+    top: 4em; }
   .main .part1 .reservate {
     position: absolute;
-    left: 23%;
-    top: 37%;
+    left: 20%;
+    top: 36%;
     background: rgba(66, 66, 66, 0.7);
-    padding: 0.5em 0.7em;
-    font-size: 1.8em;
+    padding: 0.3em 0.8em;
+    font-size: 1em;
     -moz-border-radius: 0.4em;
     /* Firefox */
     -webkit-border-radius: 0.4em;
@@ -162,7 +158,15 @@ nav {
     -o-border-radius: 0.4em;
     /* Safari 和 Chrome */
     border-radius: 0.4em;
-    /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */ }
+    /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+    box-shadow: inset 0 0 40px 5px rgba(0, 0, 0, 0.3), 0 0 2px 1px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 1px #000;
+    margin: 10px 10px 20px;
+    display: block;
+    float: left;
+    background: #CC9480;
+    text-align: center;
+    line-height: 40px; }
   .main .part2 .img-food2 {
     position: absolute;
     width: 50%;
@@ -170,66 +174,77 @@ nav {
     bottom: 0; }
   .main .part2 .slogan1 {
     position: absolute;
-    width: 26%;
-    right: 20%;
+    width: 40%;
+    right: 12%;
     top: 30%; }
   .main .part2 .slogan2 {
     position: absolute;
-    width: 30%;
-    right: 15.5%;
-    top: 47%; }
+    width: 38%;
+    right: 12.5%;
+    top: 52%; }
   .main .part2 .slogan3 {
     position: absolute;
-    width: 30%;
-    right: 15.8%;
-    top: 54%; }
+    width: 36%;
+    right: 15%;
+    top: 60%; }
   .main .part3 .board {
     position: absolute;
     width: 62%;
+    -moz-border-radius: 0.6em;
+    /* Firefox */
+    -webkit-border-radius: 0.6em;
+    /* Safari 和 Chrome */
+    -o-border-radius: 0.6em;
+    /* Safari 和 Chrome */
+    border-radius: 0.6em;
+    /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
     background: rgba(0, 0, 0, 0.5);
-    top: 15%;
+    top: 2em;
     right: 0;
     padding-top: 10px;
-    bottom: 10%;
+    bottom: 0;
     overflow-y: scroll; }
     .main .part3 .board p {
-      padding: 5% 10%;
+      padding: 0.8em 1.2em;
       color: #ccc;
-      line-height: 2em; }
+      line-height: 1.4em;
+      font-size: 0.8em; }
   .main .part3 h2 {
     position: absolute;
     border-bottom: 2px solid #eee;
     padding-bottom: 3px;
-    top: 20%;
-    left: 10%;
+    left: 0.6em;
+    top: 1.6em;
     color: #eee;
-    text-shadow: 5px 2px 6px #000;
-    font-size: 2em; }
+    text-shadow: 5px 2px 6px #333;
+    font-size: 1.5em; }
   .main .part3 h3 {
     position: absolute;
-    top: 36%;
-    left: 20%;
+    padding-bottom: 3px;
+    left: 3.6em;
+    top: 6.2em;
     color: #eee;
-    text-shadow: 5px 2px 6px #000;
-    font-size: 1em; }
+    text-shadow: 5px 2px 6px #333;
+    font-size: 0.8em; }
   .main .part4 {
     margin-top: -0.3em; }
     .main .part4 h2 {
       position: absolute;
       border-bottom: 2px solid #eee;
       padding-bottom: 3px;
-      top: 20%;
-      right: 8%;
+      right: 1em;
+      top: 1.2em;
       color: #eee;
-      text-shadow: 5px 2px 6px #000;
-      font-size: 2em; }
+      text-shadow: 5px 2px 6px #333;
+      font-size: 1.5em; }
     .main .part4 h3 {
       position: absolute;
-      top: 34%;
-      right: 18%;
+      padding-bottom: 3px;
+      right: 5.2em;
+      top: 5.2em;
       color: #eee;
-      text-shadow: 5px 2px 6px #000;
-      font-size: 1em; }
+      text-shadow: 5px 2px 6px #333;
+      font-size: 0.8em; }
     .main .part4 .board {
       position: absolute;
       -moz-border-radius: 0.5em;
@@ -240,7 +255,7 @@ nav {
       /* Safari 和 Chrome */
       border-radius: 0.5em;
       /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
-      width: 66%;
+      width: 60%;
       background: rgba(42, 134, 212, 0.6);
       top: 0;
       left: 0;
@@ -256,20 +271,16 @@ nav {
         left: 10%;
         margin-top: 5%;
         color: #eee;
-        font-weight: 600;
-        font-size: 1.2em; }
+        font-size: 1em; }
       .main .part4 .board table {
         color: #eee;
-        width: 70%;
+        width: 50%;
         margin: 1em auto; }
         .main .part4 .board table tr {
           border-bottom: 1px dashed #eee; }
         .main .part4 .board table td {
-          padding: 1em; }
-          .main .part4 .board table td a {
-            font-size: 0.4em;
-            padding: 0.3em;
-            border: 1px solid #eee; }
+          font-size: 0.7em;
+          padding: 0.3em 0.5em; }
 
 footer {
   position: relative;
@@ -278,7 +289,8 @@ footer {
   background: -webkit-linear-gradient(to bottom, #372922 0%, #281911 100%);
   background: -o-linear-gradient(to bottom, #372922 0%, #281911 100%);
   color: #8d8b8b;
-  padding: 2em 5em;
+  padding: 2em 2em;
+  font-size: 0.8em;
   margin-top: 3.2em; }
   footer .go-top {
     position: absolute;
@@ -310,16 +322,15 @@ footer {
     position: relative;
     margin-top: 2em; }
   footer h4 {
-    position: absolute;
+    margin: 2em auto;
+    margin-bottom: 0em;
     font-size: 1em;
     color: #eee;
-    right: 13%;
-    bottom: 9%;
     background-image: url("../img/weixin.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
-    height: 45%;
-    width: 25%;
+    height: 12em;
+    width: 10em;
     background-position: 0 1.8em;
     text-indent: 1.5em; }
 

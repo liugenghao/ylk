@@ -14,6 +14,7 @@ $menuItemColor: #46332c; //导航条选中元素背景色
 }
 body{
   width:100%;
+  font-size: 16px;
 }
 .container {
   width: 100%;
@@ -45,15 +46,15 @@ $topColorValues: to left, #c79081, #dfa579; //渐变参数
   }
   h1 {
     display: inline-block;
-    text-indent: -1.2em;
+    text-indent: 1.2em;
     background-image: url('../img/logo.png');
     background-repeat: no-repeat;
     background-size: 13%;
-    background-position: 0em 0.6em;
-    padding: 0.8em 3em;
+    background-position: 1em 0.8em;
+    padding: 0.8em 1em;
     color: #efefef;
     font: {
-      size: 120%;
+      size: 1em;
     }
   }
 }
@@ -73,18 +74,19 @@ nav {
   position: fixed;
   z-index: 999;
   background: $navColor;
-  width: 39%;
-  left: -39%;
+  width: 50%;
+  left: -50%;
   //left: 0;
   bottom: 0;
   li {
-    line-height: 5em;
+    line-height: 3.6em;
     a {
       position: relative;
       display: inline-block;
       width: 100%;
       text-indent: 33%;
       border-left: 0.4em solid transparent;
+      font-size: 0.8em;
       &.actived {
         background: $menuItemColor;
         border-left: 0.4em solid #C99280;
@@ -138,7 +140,31 @@ nav {
   }
 }
 
-
+@mixin textSloganSet($subT,$dir,$x,$y,$size){
+  position: absolute;
+  @if $subT=='true' {
+    border-bottom: 2px solid #eee;
+  }
+  padding-bottom: 3px;
+  @if ($dir == 'ul') {
+    left: $x;
+    top: $y;
+  } @else if ($dir == 'ur') {
+    right: $x;
+    top: $y;
+  } @else if ($dir == 'bl') {
+    left: $x;
+    bottom: $y;
+  } @else if ($dir == 'br') {
+    right: $x;
+    bottom: $y;
+  }
+  color: #eee;
+  text-shadow: 5px 2px 6px #333;
+  font: {
+    size: $size;
+  }
+}
 .main {
   height: auto;
   position: relative;
@@ -153,34 +179,33 @@ nav {
   .part1 { //第一部分
     .img-food {
       position: absolute;
-      width: 40%;
-      right: 12%;
-      top: 15%;
+      width: 42%;
+      right: 1em;
+      top: 1em;
+    }
+    h2{
+      @include textSloganSet(false,'ul',3.8em,1.8em,1em);
+      font-weight: 600;
     }
     .slogan1 {
-      @include setSlogan(26%, 'ul', 21%, 22%);
-    }
-    $ssPos:62%;
-    .slogan2 {
-      //@include setSlogan(16%,'ul',21%,36%);
-      @include setSlogan(6%, 'ul', 29%, $ssPos);
-    }
-    .slogan3 {
-      //@include setSlogan(12%,'ul',26%,56%);
-      @include setSlogan(6%, 'ul', 35%, $ssPos);
-    }
-    .slogan4 {
-      //@include setSlogan(15%,'ul',37%,42%);
-      @include setSlogan(6%, 'ul', 41%, $ssPos);
+      @include setSlogan(30%, 'ul', 3em, 4em);
     }
     .reservate{
       position: absolute;
-      left:23%;
-      top:37%;
+      left:20%;
+      top:36%;
       background:rgba(66,66,66,0.7) ;
-      padding:0.5em 0.7em;
-      font-size: 1.8em;
+      padding:0.3em 0.8em;
+      font-size: 1em;
       @include borderRadius(0.4em);
+      box-shadow:inset 0 0 40px 5px rgba(0,0,0,.3),0 0 2px 1px rgba(0,0,0,.5);
+      text-shadow: 1px 1px 1px #000;
+      margin:10px 10px 20px;
+      display:block;
+      float:left;
+      background:#CC9480;
+      text-align:center;
+      line-height:40px;
     }
   }
   .part2 {
@@ -191,82 +216,54 @@ nav {
       bottom: 0;
     }
     .slogan1 {
-      @include setSlogan(26%, 'ur', 20%, 30%);
+      @include setSlogan(40%, 'ur', 12%, 30%);
     }
     .slogan2 {
-      @include setSlogan(30%, 'ur', 15.5%, 47%);
+      @include setSlogan(38%, 'ur', 12.5%, 52%);
     }
     .slogan3 {
-      @include setSlogan(30%, 'ur', 15.8%, 54%);
+      @include setSlogan(36%, 'ur', 15%, 60%);
     }
   }
   .part3 {
     .board {
       position: absolute;
       width: 62%;
+      @include borderRadius(0.6em);
       background: rgba(0, 0, 0, .5);
-      top: 15%;
+      top: 2em;
       right: 0;
       padding-top: 10px;
-      bottom: 10%;
+      bottom: 0;
       overflow-y: scroll;
       p {
-        padding: 5% 10%;
+        padding: 0.8em 1.2em;
         color: #ccc;
-        line-height: 2em;
+        line-height: 1.4em;
+        font-size: 0.8em;
       }
     }
+    $h2posX:0.6em;
+    $h2posY:1.6em;
     h2 {
-      position: absolute;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 3px;
-      top: 20%;
-      left: 10%;
-      color: #eee;
-      text-shadow: 5px 2px 6px #000;
-      font: {
-        size: 2em;
-      }
+      @include textSloganSet('true','ul',$h2posX,$h2posY,1.5em);
     }
     h3 {
-      position: absolute;
-      top: 36%;
-      left: 20%;
-      color: #eee;
-      text-shadow: 5px 2px 6px #000;
-      font: {
-        size: 1em;
-      }
+      @include textSloganSet('false','ul',$h2posX+3em,$h2posY+4.6em,0.8em);
     }
   }
   .part4{
     margin-top:-0.3em;
     h2 {
-      position: absolute;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 3px;
-      top: 20%;
-      right: 8%;
-      color: #eee;
-      text-shadow: 5px 2px 6px #000;
-      font: {
-        size: 2em;
-      }
+      @include textSloganSet('true','ur',1em,1.2em,1.5em);
     }
     h3 {
-      position: absolute;
-      top: 34%;
-      right: 18%;
-      color: #eee;
-      text-shadow: 5px 2px 6px #000;
-      font: {
-        size: 1em;
-      }
+      @include textSloganSet('false','ur',5.2em,5.2em,0.8em);
     }
     .board {
       position: absolute;
       @include borderRadius(0.5em);
-      width: 66%;
+      width: 60%;
       background: rgba(42, 134, 212, .6);
       top: 0;
       left: 0;
@@ -283,24 +280,18 @@ nav {
         left:10%;
         margin-top:5%;
         color:#eee;
-        font-weight: 600;
-        font-size:1.2em;
+        font-size:1em;
       }
       table{
-
         color:#eee;
-        width:70%;
+        width:50%;
         margin:1em auto;
         tr{
           border-bottom: 1px dashed #eee;
         }
         td{
-          padding: 1em;
-          a{
-            font-size: 0.4em;
-            padding:0.3em;
-            border:1px solid #eee;
-          }
+          font-size: 0.7em;
+          padding: 0.3em 0.5em;
         }
       }
     }//board end
@@ -320,7 +311,8 @@ footer{
   position: relative;
   @include gradientColor($footColorValues...);
   color:#8d8b8b;
-  padding:2em 5em;
+  padding:2em 2em;
+  font-size: 0.8em;
   margin-top:3.2em;
   .go-top{
     position: absolute;
@@ -355,16 +347,16 @@ footer{
 
   }
   h4{
-    position: absolute;
+    //position: absolute;
+    margin:2em auto;
+    margin-bottom: 0em;
     font-size: 1em;
     color:#eee;
-    right: 13%;
-    bottom:9%;
     background-image: url("../img/weixin.jpg");
     background-repeat: no-repeat;
     background-size:100% ;
-    height:45%;
-    width:25%;
+    height:12em;
+    width:10em;
     background-position: 0 1.8em;
     text-indent: 1.5em;
   }
