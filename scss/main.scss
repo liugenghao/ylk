@@ -234,7 +234,7 @@ nav {
       top: 2em;
       right: 0;
       padding-top: 10px;
-      bottom: 0;
+      bottom: 1em;
       overflow-y: scroll;
       p {
         padding: 0.8em 1.2em;
@@ -265,9 +265,8 @@ nav {
       @include borderRadius(0.5em);
       width: 60%;
       background: rgba(42, 134, 212, .6);
-      top: 0;
+      top: 2em;
       left: 0;
-      padding-top: 10px;
       bottom: 0.2em;
       overflow: hidden;
       p {
@@ -284,8 +283,8 @@ nav {
       }
       table{
         color:#eee;
-        width:50%;
-        margin:1em auto;
+        width:66%;
+        margin:0.2em auto;
         tr{
           border-bottom: 1px dashed #eee;
         }

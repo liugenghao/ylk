@@ -202,7 +202,7 @@ nav {
     top: 2em;
     right: 0;
     padding-top: 10px;
-    bottom: 0;
+    bottom: 1em;
     overflow-y: scroll; }
     .main .part3 .board p {
       padding: 0.8em 1.2em;
@@ -257,9 +257,8 @@ nav {
       /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
       width: 60%;
       background: rgba(42, 134, 212, 0.6);
-      top: 0;
+      top: 2em;
       left: 0;
-      padding-top: 10px;
       bottom: 0.2em;
       overflow: hidden; }
       .main .part4 .board p {
@@ -274,8 +273,8 @@ nav {
         font-size: 1em; }
       .main .part4 .board table {
         color: #eee;
-        width: 50%;
-        margin: 1em auto; }
+        width: 66%;
+        margin: 0.2em auto; }
         .main .part4 .board table tr {
           border-bottom: 1px dashed #eee; }
         .main .part4 .board table td {
