@@ -12,6 +12,9 @@ $menuItemColor: #46332c; //导航条选中元素背景色
   -o-border-radius: $arg; /* Safari 和 Chrome */
   border-radius: $arg; /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
 }
+body{
+  width:100%;
+}
 .container {
   width: 100%;
   overflow: hidden;
